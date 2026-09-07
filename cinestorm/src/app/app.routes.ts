@@ -26,7 +26,7 @@ export const routes: Routes = [
     loadComponent : () => import('./features/movie//details-movie/details-movie.component').then((c) => c.DetailsMovieComponent)
   },
     {
-    path : 'update-movie',
+    path : 'update-movie/:id',
     loadComponent : () => import('./features/movie//update-movie/update-movie.component').then((c) => c.UpdateMovieComponent)
   },
   { 

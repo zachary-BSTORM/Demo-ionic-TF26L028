@@ -1,12 +1,15 @@
 <ion-header>
-  <h2>Movies</h2>
-  <ion-back-button></ion-back-button>
+  <h2 class="ion-text-center">Movies</h2>
+<ion-button fill="clear" slot="start">
+  <ion-back-button  defaultHref="/home"></ion-back-button>
+</ion-button>
 
   <ion-searchbar
     placeholder="Recherche de film"
     [debounce]="100"
     (ionInput)="getSearchValue($event)"
   ></ion-searchbar>
+
 </ion-header>
 
 <ion-content>
@@ -18,7 +21,7 @@
           <img [src]="m.imageUrl" [alt]="m.title">
         </ion-thumbnail>
 
-        <ion-label>
+        <ion-label class="ion-text-center">
           <h2>{{m.title}}</h2>
           <p>{{m.year}}</p>
         </ion-label>
