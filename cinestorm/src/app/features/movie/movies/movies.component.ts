@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { IonHeader, IonContent, IonBackButton } from "@ionic/angular";
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss'],
+  selector: 'app-movies',
+  templateUrl: './movies.component.html',
+  styleUrls: ['./movies.component.scss'],
   imports: [IonHeader, IonContent, IonBackButton],
 })
-export class ProfileComponent  implements OnInit {
+export class MoviesComponent  implements OnInit {
 
   constructor() { }
 

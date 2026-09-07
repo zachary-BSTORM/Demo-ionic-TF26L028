@@ -13,6 +13,22 @@ export const routes: Routes = [
     path : 'balises',
     loadComponent : () => import('./balises/balises.component').then((c) => c.BalisesComponent)
   },
+  {
+    path : 'movies',
+    loadComponent : () => import('./features/movie/movies/movies.component').then((c) => c.MoviesComponent)
+  },
+    {
+    path : 'add-movie',
+    loadComponent : () => import('./features/movie//add-movie/add-movie.component').then((c) => c.AddMovieComponent)
+  },
+    {
+    path : 'details-movie',
+    loadComponent : () => import('./features/movie//details-movie/details-movie.component').then((c) => c.DetailsMovieComponent)
+  },
+    {
+    path : 'update-movie',
+    loadComponent : () => import('./features/movie//update-movie/update-movie.component').then((c) => c.UpdateMovieComponent)
+  },
   { 
     path: '', 
     redirectTo: 'home', 

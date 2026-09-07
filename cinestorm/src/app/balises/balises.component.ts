@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonContent, IonHeader , IonIcon } from '@ionic/angular';
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonContent, IonHeader, IonIcon, IonBackButton } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
 import { heart , trash,camera} from 'ionicons/icons';
@@ -8,7 +8,7 @@ import { heart , trash,camera} from 'ionicons/icons';
   selector: 'app-balises',
   templateUrl: './balises.component.html',
   styleUrls: ['./balises.component.scss'],
-  imports: [IonHeader,IonContent,IonCard,IonCardHeader,IonCardContent,IonButton,IonIcon],
+  imports: [IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent, IonButton, IonIcon, IonBackButton],
 })
 export class BalisesComponent{
 
