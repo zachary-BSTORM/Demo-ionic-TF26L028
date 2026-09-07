@@ -7,6 +7,11 @@
 https://ionicframework.com/docs/
 ```
 
+- version de nvm
+```bash
+npm install -g npm@11
+```
+
 - installation de ionic
 ```bash
 npm install -g @ionic/cli
@@ -23,3 +28,15 @@ ionic --version
 ```bash
 ionic start cinestorm blank --type=angular
 ```
+- cinestorm : nom du projet
+- blank : template de base
+- --type=angular = framework à utiliser
+
+### Lancer l'application
+
+```bash
+ionic serve
+```
+
+---
+
