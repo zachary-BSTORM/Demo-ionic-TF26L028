@@ -1,8 +1,35 @@
 <ion-header>
   <h2>Movies</h2>
   <ion-back-button></ion-back-button>
+
+  <ion-searchbar
+    placeholder="Recherche de film"
+    [debounce]="100"
+    (ionInput)="getSearchValue($event)"
+  ></ion-searchbar>
 </ion-header>
 
 <ion-content>
-  <p>Liste de film</p>
+  <ion-list>
+    @for (m of filteredMovies(); track m.id) {
+      <ion-item button detail (click)="navigateToDetails(m.id)">
+
+        <ion-thumbnail>
+          <img [src]="m.imageUrl" [alt]="m.title">
+        </ion-thumbnail>
+
+        <ion-label>
+          <h2>{{m.title}}</h2>
+          <p>{{m.year}}</p>
+        </ion-label>
+
+      </ion-item>
+    }@empty {
+
+      <ion-item>
+        Aucun film trouvé
+      </ion-item>
+
+    }
+  </ion-list>
 </ion-content>

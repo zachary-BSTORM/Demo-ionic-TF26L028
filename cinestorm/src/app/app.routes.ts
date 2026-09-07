@@ -22,7 +22,7 @@ export const routes: Routes = [
     loadComponent : () => import('./features/movie//add-movie/add-movie.component').then((c) => c.AddMovieComponent)
   },
     {
-    path : 'details-movie',
+    path : 'details-movie/:id',
     loadComponent : () => import('./features/movie//details-movie/details-movie.component').then((c) => c.DetailsMovieComponent)
   },
     {
