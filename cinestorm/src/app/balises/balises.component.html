@@ -1,0 +1,104 @@
+<ion-header>
+  <h2>Les balises</h2>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card>
+    <ion-card-header>
+      <h4>Header de la carte</h4>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>contenu de la carte</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>ion-button</h4>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-header>
+        <h4>ion-button style</h4>
+      </ion-card-header>
+      <ion-button>Button</ion-button>
+
+      <ion-button fill="outline">Button</ion-button>
+      <ion-button fill="clear">Button</ion-button>
+
+    </ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+
+        <ion-card-header>
+          <h4>ion-button couleurs</h4>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button color="primary">primary</ion-button>
+          <ion-button color="secondary">secondary</ion-button>
+          <ion-button color="success">success</ion-button>
+          <ion-button color="warning">warning</ion-button>
+          <ion-button color="danger">danger</ion-button>
+          <ion-button color="medium">medium</ion-button>
+          <ion-button color="dark">dark</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+
+        <ion-card-header>
+          <h4>ion-button event</h4>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button (click)="showInfo()" color="primary" fill="outline">Click</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+        <ion-card-header>
+          <h4>expand ,size , shape</h4>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button expand="block">expand="block"</ion-button>
+          <ion-button expand="full">expand="full"</ion-button>
+          <ion-button size="small">small</ion-button>
+          <ion-button size="default">default</ion-button>
+          <ion-button size="large">large</ion-button>
+          <ion-button shape="round">shape="round"</ion-button>
+          <ion-button [disabled]="true">disabled</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+            <ion-card>
+        <ion-card-header>
+          <h4>Event : (click)="action()</h4>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button [disabled]="isDisabled()">disabled</ion-button>
+          <ion-button (click)="toggleButton()">Activer-désactiver</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <h4>Icon</h4>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Pour utiliser les icones il faut importer l'icones </p>
+          <p>importer "addIcons" de  "ionicons"</p>
+          <p>Pour chaque icones on l'importe depuis : "ionicons/icons"</p>
+          <ion-icon name="heart"></ion-icon>
+          <ion-icon name="trash"></ion-icon>
+          <ion-icon name="camera"></ion-icon>
+        </ion-card-content>
+      </ion-card>
+
+
+
+</ion-content>

@@ -9,6 +9,10 @@ export const routes: Routes = [
     path : 'profile' , 
     loadComponent : () => import('./profile/profile.component').then((c) => c.ProfileComponent)
   },
+  {
+    path : 'balises',
+    loadComponent : () => import('./balises/balises.component').then((c) => c.BalisesComponent)
+  },
   { 
     path: '', 
     redirectTo: 'home', 

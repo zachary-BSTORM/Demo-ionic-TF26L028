@@ -40,3 +40,5 @@ ionic serve
 
 ---
 
+# Structure d'une page
+
