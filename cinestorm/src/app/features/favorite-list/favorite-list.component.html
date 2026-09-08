@@ -1,0 +1,35 @@
+<ion-header>
+
+</ion-header>
+<ion-content>
+  <ion-list>
+    @for (f of favorites(); track f.id) {
+      <ion-item-sliding>
+        <ion-item>
+
+          <ion-card>
+            <ion-card-header>
+              <h2>{{f.title}}</h2>
+            </ion-card-header>
+            
+            <img [src]="f.imageUrl" [alt]="f.title" >
+            
+            <ion-card-content>
+              <p>{{f.description}}</p>
+              <p>{{f.year}}</p>
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-item>
+
+        <ion-item-options slide="end" (ionSwipe)="removeFavorite(f.id)">
+          <ion-item-option color="danger" (click)="removeFavorite(f.id)">
+            <ion-icon slot="bottom" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+
+      </ion-item-sliding>
+    }
+  </ion-list>
+
+</ion-content>

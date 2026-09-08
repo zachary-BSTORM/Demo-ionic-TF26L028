@@ -29,6 +29,10 @@ export const routes: Routes = [
     path : 'update-movie/:id',
     loadComponent : () => import('./features/movie//update-movie/update-movie.component').then((c) => c.UpdateMovieComponent)
   },
+  {
+    path : 'favorites',
+    loadComponent : () => import('./features/favorite-list/favorite-list.component').then(c => c.FavoriteListComponent)
+  },
   { 
     path: '', 
     redirectTo: 'home', 

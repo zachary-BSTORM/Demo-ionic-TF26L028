@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonBackButton, IonButton } from '@ionic/angular';
+import { IonHeader, IonContent, IonBackButton, IonButton } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
