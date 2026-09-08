@@ -8,18 +8,65 @@
     <form [formGroup]="formMovie" (ngSubmit)="onSubmit()">
 
         <ion-card>
-            <ion-label>Titre</ion-label>
-            <ion-input type="text" formControlName="title"></ion-input>
+            <ion-card-header>
+                <ion-label class="ion-text-center">Titre</ion-label>
+            </ion-card-header>
+
+            <ion-card-content>
+                <ion-input type="text" formControlName="title"></ion-input>
+            </ion-card-content>
+
+            @if(formMovie.get('title')?.getError('required') && formMovie.get('title')?.touched){
+                <ion-card-subtitle color="danger" class="ion-text-center">
+                        Le titre est obligatoire
+                </ion-card-subtitle>
+                }
+
+            @if(formMovie.get('title')?.getError('minlength') && formMovie.get('title')?.dirty){
+                <ion-card-subtitle color="danger" class="ion-text-center">
+                        Le titre doit faire au minimum 3 caractères
+                </ion-card-subtitle>
+                }
         </ion-card>
 
         <ion-card>
-            <ion-label>Description</ion-label>
-            <ion-textarea formControlName="description"></ion-textarea>
+            <ion-card-header>
+                <ion-label>Description</ion-label>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-textarea formControlName="description"></ion-textarea>
+            </ion-card-content>
+            @if(formMovie.get('description')?.getError('required') && formMovie.get('description')?.dirty){
+                <ion-card-subtitle color="danger" class="ion-text-center">
+                        La description est obligatoire
+                </ion-card-subtitle>
+                }
+
         </ion-card>
 
         <ion-card>
-            <ion-label>Année</ion-label>
-            <ion-input type="number" formControlName="year"></ion-input>
+            <ion-card-header>
+                <ion-label>Année</ion-label>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-input type="number" formControlName="year"></ion-input>
+            </ion-card-content>
+            @if(formMovie.get('year')?.getError('required') && formMovie.get('year')?.dirty){
+                <ion-card-subtitle color="danger" class="ion-text-center">
+                        L'année est obligatoire
+                </ion-card-subtitle>
+                }
+            @if(formMovie.get('year')?.getError('min') && formMovie.get('year')?.dirty){
+                <ion-card-subtitle color="danger" class="ion-text-center">
+                        L'année doit être supérieur à 1950
+                </ion-card-subtitle>
+                }
+
+            @if(formMovie.get('year')?.getError('max') && formMovie.get('year')?.dirty){
+                <ion-card-subtitle color="danger" class="ion-text-center">
+                        L'année doit être inférieur à 2030
+                </ion-card-subtitle>
+                }
         </ion-card>
 
         <ion-card>

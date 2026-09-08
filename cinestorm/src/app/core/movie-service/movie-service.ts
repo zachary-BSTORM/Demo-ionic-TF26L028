@@ -146,7 +146,7 @@ export class MovieService {
         imageUrl : "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg"
     }
 ])
-    lastId = signal<number>(0)
+    lastId = signal<number>(20)
 
     getMovies(){
         return this.movies

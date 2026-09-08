@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonBackButton, NavController, IonCard, IonInput, IonLabel, IonTextarea, IonButton } from '@ionic/angular';
+import { IonContent, IonHeader, IonBackButton, NavController, IonCard, IonInput, IonLabel, IonTextarea, IonButton, IonCardHeader, IonCardContent, IonCardSubtitle } from '@ionic/angular';
 import { MovieService } from '../../../core/movie-service/movie-service';
 import { CreateMovie } from '../movies-model';
 
@@ -9,7 +9,7 @@ import { CreateMovie } from '../movies-model';
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.scss'],
   // nécéssite un import
-  imports: [IonHeader, IonContent, IonBackButton, IonCard, IonInput, IonLabel, IonTextarea, ReactiveFormsModule, IonButton],
+  imports: [IonHeader, IonContent, IonBackButton, IonCard, IonInput, IonLabel, IonTextarea, ReactiveFormsModule, IonButton, IonCardHeader, IonCardContent, IonCardSubtitle],
 })
 
 export class AddMovieComponent {
@@ -31,12 +31,9 @@ formMovie = new FormGroup({
   // methode pour la soumission du formulaire
   onSubmit(){
     if(this.formMovie.valid){
-      const valueForm = this.formMovie.value
+      const valueForm = this.formMovie.value as CreateMovie
       
-      const movieToAdd : CreateMovie = this.formMovie.value as CreateMovie
-      
-      
-      this.movieService.addMovie(movieToAdd)
+      this.movieService.addMovie(valueForm)
 
       this.nav.navigateForward(['/movies'])
     }
