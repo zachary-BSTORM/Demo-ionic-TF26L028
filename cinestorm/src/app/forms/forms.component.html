@@ -1,0 +1,73 @@
+<ion-header>
+<h2>Formulaires</h2>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+  <ion-card-header>
+    Les formulaires 
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>Même fonctionnement qu'avec angular ,ReactiveFormsModule , une balise form , des formControlName </p>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <h3>Exemple de formulaire</h3>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <form [formGroup]="formDemo" (ngSubmit)="onSubmit()">
+      <ion-label>Nom du champ</ion-label>
+      <ion-input #input type="text" placeholder="Entrez une valeur" color="dark" formControlName="valueTest"></ion-input>
+      <ion-button type="submit">Send Value</ion-button>
+    </form>
+
+    </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <h3>Exemple</h3>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-label>Text</ion-label>
+    <ion-input type="text"></ion-input>
+
+    <ion-label>Number</ion-label>
+    <ion-input type="number"></ion-input>
+
+    <ion-label>TextArea</ion-label>
+    <ion-textarea ></ion-textarea>
+    
+    <ion-label>Select - options</ion-label>
+    <ion-select>
+      <ion-select-option value="un">Un</ion-select-option>
+      <ion-select-option value="Deux">Deux</ion-select-option>
+      <ion-select-option value="trois">Trois</ion-select-option>
+    </ion-select>
+
+    <div>
+      <ion-label>Toggle</ion-label>
+      <ion-toggle></ion-toggle>
+    </div>
+    
+    <div>
+      <ion-label>Checkbox</ion-label>
+    </div>
+      <ion-checkbox></ion-checkbox>
+
+    <ion-label>Range</ion-label>
+    <ion-range [min]="0" [max]="100" [pin]="true"></ion-range>
+
+    <ion-label>SearchBar</ion-label>
+    <ion-searchbar placeholder="Recherche"></ion-searchbar>
+
+    </ion-card-content>
+</ion-card>
+</ion-content>

@@ -14,6 +14,10 @@ export const routes: Routes = [
     loadComponent : () => import('./balises/balises.component').then((c) => c.BalisesComponent)
   },
   {
+    path : 'forms',
+    loadComponent : () => import('./forms/forms.component').then((c) => c.FormsComponent)
+  },
+  {
     path : 'movies',
     loadComponent : () => import('./features/movie/movies/movies.component').then((c) => c.MoviesComponent)
   },
