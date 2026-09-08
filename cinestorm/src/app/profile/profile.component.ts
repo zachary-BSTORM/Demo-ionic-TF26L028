@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { IonHeader, IonContent, IonBackButton } from "@ionic/angular";
+import { IonHeader, IonContent, IonBackButton ,IonButton} from "@ionic/angular";
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
-  imports: [IonHeader, IonContent, IonBackButton],
+  imports: [IonButton, IonHeader, IonContent, IonBackButton],
 })
-export class ProfileComponent  implements OnInit {
+export class ProfileComponent {
 
   constructor() { }
-
-  ngOnInit() {}
 
 }

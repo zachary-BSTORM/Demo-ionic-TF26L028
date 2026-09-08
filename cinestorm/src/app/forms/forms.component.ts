@@ -1,12 +1,12 @@
 import { Component, inject, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent, IonInput, IonLabel, IonButton, IonTextarea, IonSelect, IonSelectOption, IonToggle, IonCheckbox, IonRange, IonSearchbar } from "@ionic/angular";
+import { IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent, IonInput, IonLabel, IonButton, IonTextarea, IonSelect, IonSelectOption, IonToggle, IonCheckbox, IonRange, IonSearchbar,IonBackButton } from "@ionic/angular";
 
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss'],
-  imports: [IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent, IonInput, IonLabel, IonButton, ReactiveFormsModule, IonTextarea, IonSelect, IonSelectOption, IonToggle, IonCheckbox, IonRange, IonSearchbar],
+  imports: [IonBackButton, IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent, IonInput, IonLabel, IonButton, ReactiveFormsModule, IonTextarea, IonSelect, IonSelectOption, IonToggle, IonCheckbox, IonRange, IonSearchbar],
 })
 export class FormsComponent{
 

@@ -176,9 +176,20 @@ export class MovieService {
     }
 
     updateMovie(updatedMovie : UpdateMovie){
-        this.movies.update(list => 
-            list.map(m => m.id === updatedMovie.id ? {...m , ...updatedMovie} : m)
+        this.movies.update((list) =>  
+             list.map(m => m.id === updatedMovie.id ? 
+                {
+                    id : updatedMovie.id,
+                    title : updatedMovie.title,
+                    description : updatedMovie.description,
+                    year : m.year,
+                    imageUrl : updatedMovie.imageUrl
+                }
+                : m)
+         
         )
+
+        
     }
 
     deleteMovie(id : number){

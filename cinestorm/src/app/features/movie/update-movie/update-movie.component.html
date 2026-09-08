@@ -1,10 +1,36 @@
 <ion-header>
   <h2>Mise à jour d'un film</h2>
-  <ion-back-button></ion-back-button>
+  <ion-button fill="clear" slot="start" >
+  <ion-back-button  defaultHref="/movies"></ion-back-button>
+</ion-button>
 </ion-header>
 
 <ion-content>
   <p>Modification d'un film</p>
 
-  <!-- Implementation du formulaire -->
+  <form [formGroup]="updateForm" (ngSubmit)="updateMovie()">
+
+    <ion-input
+      label="Titre"
+      formControlName="title"
+      errorText="Le titre est obligatoire ( 3 caractères minimum)"
+    ></ion-input>
+
+    <ion-textarea
+      label="description"
+      formControlName="description"
+      errorText="la description est obligatoire ( maximum 100 caractères)"
+    >
+    </ion-textarea>
+
+    <ion-input
+    label="image"
+    formControlName="imageUrl"
+    ></ion-input>
+
+    <ion-button
+      type="submit"
+      [disabled]="updateForm.invalid"
+    >Enregistrer</ion-button>
+  </form>
 </ion-content>
