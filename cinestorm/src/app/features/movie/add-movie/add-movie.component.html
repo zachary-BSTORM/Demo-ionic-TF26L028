@@ -1,9 +1,33 @@
 <ion-header>
-<h2>Ajout d'un Film</h2>
-<ion-back-button defaultHref="/movies"></ion-back-button>
+    <h2>Ajout d'un Film</h2>
+    <ion-back-button></ion-back-button>
 </ion-header>
 
 <ion-content>
-<p>Ajout de film</p>
+
+    <form [formGroup]="formMovie" (ngSubmit)="onSubmit()">
+
+        <ion-card>
+            <ion-label>Titre</ion-label>
+            <ion-input type="text" formControlName="title"></ion-input>
+        </ion-card>
+
+        <ion-card>
+            <ion-label>Description</ion-label>
+            <ion-textarea formControlName="description"></ion-textarea>
+        </ion-card>
+
+        <ion-card>
+            <ion-label>Année</ion-label>
+            <ion-input type="number" formControlName="year"></ion-input>
+        </ion-card>
+
+        <ion-card>
+            <ion-label>Image</ion-label>
+            <ion-input type="text" formControlName="imageUrl"></ion-input>
+        </ion-card>
+
+        <ion-button type="submit" color="success">Add Movie</ion-button>
+    </form>
 
 </ion-content>
