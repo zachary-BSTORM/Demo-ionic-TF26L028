@@ -9,8 +9,24 @@ import { IonHeader, IonContent, IonBackButton } from "@ionic/angular";
 })
 export class UpdateMovieComponent  implements OnInit {
 
+  // nécéssite un formulaire
+
+
+  // injection du service
+
+  // injection de l'activatedRoute
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // récupération de l'id par la route
 
+    // récupération de l'objet à modifier par le service
+
+
+    // affecter les valeurs à votre fomulaires
+  }
+
+
+  // methode pour soumettre la mise à jour
 }
