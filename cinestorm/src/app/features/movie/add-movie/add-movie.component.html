@@ -7,7 +7,7 @@
 
     <form [formGroup]="formMovie" (ngSubmit)="onSubmit()">
 
-        <ion-card>
+        <ion-card class="ion-padding">
             <ion-card-header>
                 <ion-label class="ion-text-center">Titre</ion-label>
             </ion-card-header>
@@ -29,7 +29,7 @@
                 }
         </ion-card>
 
-        <ion-card>
+        <ion-card class="ion-padding">
             <ion-card-header>
                 <ion-label>Description</ion-label>
             </ion-card-header>
@@ -44,7 +44,7 @@
 
         </ion-card>
 
-        <ion-card>
+        <ion-card class="ion-padding">
             <ion-card-header>
                 <ion-label>Année</ion-label>
             </ion-card-header>
@@ -69,7 +69,7 @@
                 }
         </ion-card>
 
-        <ion-card>
+        <ion-card class="ion-padding">
             <ion-label>Image</ion-label>
             <ion-input type="text" formControlName="imageUrl"></ion-input>
         </ion-card>
